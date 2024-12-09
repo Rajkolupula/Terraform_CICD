@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/Terraform_CICD.git'
+                git branch: 'main', url: 'https://github.com/Rajkolupula/Jenkins.git'
             }
         }
-        stage('init') {
+        stage('python apply') {
             steps {
-                sh 'terraform init'
+                sh 'python3 app.py'
             }
         }
     }
