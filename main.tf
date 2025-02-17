@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-2"
+  region = "ap-south-1"
 }
 
-resource "aws_instance" "dev" {
-    ami = "ami-00db8dadb36c9815e"
-    instance_type = "t2.nano"
+resource "aws_instance" "name" {
+    ami = "ami-0ddfba243cbee3768"
+    instance_type = "t2.medium"
     tags = {
-      Name = "dev123"
+      Name = "jenkins"
     }
 }
